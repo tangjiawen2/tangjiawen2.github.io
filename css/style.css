@@ -1462,6 +1462,12 @@ photos img {
   color: #fff;
   background-color: rgba(144,144,255,0.7);
 }
+.code pre {
+  color: #fff;
+}
+article table {
+  text-align: left;
+}
 @-moz-keyframes shake-it {
   0% {
     text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
