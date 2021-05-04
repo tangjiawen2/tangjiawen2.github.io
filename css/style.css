@@ -1342,32 +1342,6 @@ photos img {
   color: #fff;
   background-color: rgba(144,144,255,0.7);
 }
-.code pre {
-  color: #fff;
-}
-article table {
-  text-align: left;
-}
-pre .number,
-pre .preprocessor,
-pre .built_in,
-pre .literal,
-pre .params,
-pre .constant {
-  color: #f99157;
-}
-pre .keyword,
-pre .javascript .function {
-  color: #c9c;
-}
-pre .string,
-pre .value,
-pre .inheritance,
-pre .header,
-pre .ruby .symbol,
-pre .xml .cdata {
-  color: #9c9;
-}
 code {
   padding: 1px 5px;
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;

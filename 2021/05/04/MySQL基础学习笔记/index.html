@@ -28,16 +28,16 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/唐加文/AppData/Roaming/Typora/typora-user-images/image-20210423205721169.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=1620137714025">
+  <link rel="stylesheet" href="/css/style.css?v=1620139313497">
   
-  <link rel="stylesheet" href="/css/style.css?v=1620137714025">
-  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1620137714025">
+  <link rel="stylesheet" href="/css/style.css?v=1620139313497">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1620139313497">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
   
   <div id="nexmoe-background">
-    <div class="nexmoe-bg" style="background-image: url(https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg)"></div>
+    <div class="nexmoe-bg" style="background-image: url(/images/背景.jpg)"></div>
     <div class="mdui-appbar mdui-shadow-0">
       <div class="mdui-toolbar">
         <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
@@ -134,14 +134,14 @@
         
             <div class="nexmoe-post-cover"
                  style="padding-bottom: 66.66666666666666%;">
-                <img data-src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/cover/5c3aec85a4343.jpg" data-sizes="auto" alt="MySQL基础学习笔记" class="lazyload">
+                <img data-src="/images/背景.jpg" data-sizes="auto" alt="MySQL基础学习笔记" class="lazyload">
                 <h1>MySQL基础学习笔记</h1>
             </div>
         
 
         <div class="nexmoe-post-meta nexmoe-rainbow-fill" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2021年05月04日</a>
-    <a><i class="nexmoefont icon-areachart"></i>3k 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>2.9k 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 13 分钟</a>
 </div>
 
@@ -151,8 +151,23 @@
 <span id="more"></span>
 
 <h1 id="1、初识MySQL"><a href="#1、初识MySQL" class="headerlink" title="1、初识MySQL"></a>1、初识MySQL</h1><h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><p>命令行连接</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="operator">-</span>uroot <span class="operator">-</span>p       <span class="comment">--连接数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--------------------------------------</span></span><br><span class="line"><span class="comment">--所有的语句都使用;结尾</span></span><br><span class="line"><span class="keyword">show</span> databases;   <span class="comment">--查看所有数据库</span></span><br><span class="line"></span><br><span class="line">mysql<span class="operator">&gt;</span>use school  <span class="comment">--切换数据库 use 数据库名</span></span><br><span class="line">Database changed</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> tables; <span class="comment">--查看数据库中所有的表</span></span><br><span class="line"><span class="keyword">describe</span> student;  <span class="comment">--显示数据库中所有的表的信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> database westos;  <span class="comment">--创建一个数据库</span></span><br><span class="line">exit; <span class="comment">--退出连接</span></span><br><span class="line"><span class="comment">--单行注释</span></span><br><span class="line"><span class="comment">/**/</span>  <span class="comment">--多行注释</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">mysql -uroot -p       --连接数据库
 
+--------------------------------------
+--所有的语句都使用;结尾
+show databases;   --查看所有数据库
+
+mysql&gt;use school  --切换数据库 use 数据库名
+Database changed
+
+show tables; --查看数据库中所有的表
+describe student;  --显示数据库中所有的表的信息
+
+create database westos;  --创建一个数据库
+exit; --退出连接
+--单行注释
+/**/  --多行注释
+</code></pre>
 <p>数据库xxx语言   CRUD 增删查改！</p>
 <p>DDL  定义</p>
 <p>DML  操作</p>
@@ -161,17 +176,19 @@
 <h1 id="2、操作数据库"><a href="#2、操作数据库" class="headerlink" title="2、操作数据库"></a>2、操作数据库</h1><p>操作数据库&gt;操作数据库中的表&gt;操作数据库中表的数据</p>
 <p>==mysql数据库不区分大小写==</p>
 <h2 id="2-1、操作数据库（了解）"><a href="#2-1、操作数据库（了解）" class="headerlink" title="2.1、操作数据库（了解）"></a>2.1、操作数据库（了解）</h2><p>1、创建数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database [IF <span class="keyword">not</span> <span class="keyword">exists</span>] westos</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">create database [IF not exists] westos
+</code></pre>
 <p>2、删除数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE [IF <span class="keyword">EXISTS</span>] westos</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">DROP DATABASE [IF EXISTS] westos
+</code></pre>
 <p>3、使用数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 如果你的的表名或者字段名是一个特殊字符，就需要带``（tab键的上面）</span></span><br><span class="line">USE school</span><br><span class="line"><span class="keyword">SELECT</span> `<span class="keyword">user</span>` <span class="keyword">FROM</span> student </span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">-- 如果你的的表名或者字段名是一个特殊字符，就需要带``（tab键的上面）
+USE school
+SELECT `user` FROM student 
+</code></pre>
 <p>4、查看数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> DATABASES; <span class="comment">--查看所有数据库</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">SHOW DATABASES; --查看所有数据库
+</code></pre>
 <p>对比：SQLyog的可视化操作</p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\唐加文\AppData\Roaming\Typora\typora-user-images\image-20210423205721169.png" alt="image-20210423205721169" class="lazyload"></p>
 <p><strong>学习思路</strong>：</p>
@@ -215,18 +232,41 @@
 <p>sex,默认值为男，如果不指定该列的值，则会有默认的值！</p>
 <p>拓展：听听就好</p>
 <p><img data-fancybox="gallery" data-sizes="auto" data-src="C:\Users\唐加文\AppData\Roaming\Typora\typora-user-images\image-20210423222624497.png" alt="image-20210423222624497" class="lazyload"></p>
-<h2 id="2-4、创建数据库表（重点）"><a href="#2-4、创建数据库表（重点）" class="headerlink" title="2.4、创建数据库表（重点）"></a>2.4、创建数据库表（重点）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 注意点，使用英文()，表的名称和字段尽量使用``括起来</span></span><br><span class="line"><span class="comment">-- AUTO_INCREMENT 自增</span></span><br><span class="line"><span class="comment">-- 字符串使用单引号括起来</span></span><br><span class="line"><span class="comment">-- 所有的语句后面加,(英文的)，最后一个不用加</span></span><br><span class="line"><span class="comment">-- PRIMARY KEY 主键，一般一个表只有一个唯一的主键！</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> `student`(</span><br><span class="line">   `id` <span class="type">INT</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;学号&#x27;</span>,</span><br><span class="line">   `name` <span class="type">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;匿名&#x27;</span> COMMENT <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">   `pwd` <span class="type">VARCHAR</span>(<span class="number">20</span>)<span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;123456&#x27;</span> COMMENT <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">   `sex` <span class="type">VARCHAR</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;女&#x27;</span> COMMENT <span class="string">&#x27;性别&#x27;</span>,</span><br><span class="line">   `birthday` DATETIME <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;出生日期&#x27;</span>,</span><br><span class="line">   `address` <span class="type">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;家庭住址&#x27;</span>,</span><br><span class="line">   `email` <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邮箱&#x27;</span>,</span><br><span class="line">   <span class="keyword">PRIMARY</span> KEY(`id`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8</span><br></pre></td></tr></table></figure>
-
+<h2 id="2-4、创建数据库表（重点）"><a href="#2-4、创建数据库表（重点）" class="headerlink" title="2.4、创建数据库表（重点）"></a>2.4、创建数据库表（重点）</h2><pre><code class="sql">-- 注意点，使用英文()，表的名称和字段尽量使用``括起来
+-- AUTO_INCREMENT 自增
+-- 字符串使用单引号括起来
+-- 所有的语句后面加,(英文的)，最后一个不用加
+-- PRIMARY KEY 主键，一般一个表只有一个唯一的主键！
+CREATE TABLE IF NOT EXISTS `student`(
+   `id` INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+   `name` VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+   `pwd` VARCHAR(20)NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
+   `sex` VARCHAR(2) NOT NULL DEFAULT &#39;女&#39; COMMENT &#39;性别&#39;,
+   `birthday` DATETIME DEFAULT NULL COMMENT &#39;出生日期&#39;,
+   `address` VARCHAR(100) DEFAULT NULL COMMENT &#39;家庭住址&#39;,
+   `email` VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,
+   PRIMARY KEY(`id`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8
+</code></pre>
 <p>格式</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] `表名`(</span><br><span class="line">   `字段名` 列类型[属性] [索引] [注释],</span><br><span class="line">   `字段名` 列类型[属性] [索引] [注释],</span><br><span class="line">    ......</span><br><span class="line">   `字段名` 列类型[属性] [索引] [注释]</span><br><span class="line">)[表类型][字符集设置][注释]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">CREATE TABLE [IF NOT EXISTS] `表名`(
+   `字段名` 列类型[属性] [索引] [注释],
+   `字段名` 列类型[属性] [索引] [注释],
+    ......
+   `字段名` 列类型[属性] [索引] [注释]
+)[表类型][字符集设置][注释]
+</code></pre>
 <p>常用命令</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHow</span> <span class="keyword">create</span> database school  <span class="comment">-- 查看创建数据库的语句</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> student  <span class="comment">-- 查看student数据表的定义语句</span></span><br><span class="line"><span class="keyword">DEsc</span> student  <span class="comment">-- 显示表的结构</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-5、数据表的类型"><a href="#2-5、数据表的类型" class="headerlink" title="2.5、数据表的类型"></a>2.5、数据表的类型</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 关于数据库引擎</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">INNOB 默认使用</span></span><br><span class="line"><span class="comment">MYISAM 早些年使用的</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">SHow create database school  -- 查看创建数据库的语句
+show create table student  -- 查看student数据表的定义语句
+DEsc student  -- 显示表的结构
+</code></pre>
+<h2 id="2-5、数据表的类型"><a href="#2-5、数据表的类型" class="headerlink" title="2.5、数据表的类型"></a>2.5、数据表的类型</h2><pre><code class="sql">-- 关于数据库引擎
+/*
+INNOB 默认使用
+MYISAM 早些年使用的
+*/
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -278,19 +318,29 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-设置数据库表的字符集编码"><a href="#2-设置数据库表的字符集编码" class="headerlink" title="2.设置数据库表的字符集编码"></a>2.设置数据库表的字符集编码</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CHARSET<span class="operator">=</span>utf8</span><br></pre></td></tr></table></figure>
-
+<h3 id="2-设置数据库表的字符集编码"><a href="#2-设置数据库表的字符集编码" class="headerlink" title="2.设置数据库表的字符集编码"></a>2.设置数据库表的字符集编码</h3><pre><code class="sql">CHARSET=utf8
+</code></pre>
 <p>不设置的话，会是mysql默认的字符集编码~(不支持中文！)</p>
 <p>MYSQL的默认编码是Latin1,不支持中文</p>
 <p>在my.ini中配置默认的编码</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">character</span><span class="operator">-</span><span class="keyword">set</span><span class="operator">-</span>server<span class="operator">=</span>utf8</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">character-set-server=utf8
+</code></pre>
+<h2 id="2-6、修改表"><a href="#2-6、修改表" class="headerlink" title="2.6、修改表"></a>2.6、修改表</h2><h3 id="1-修改"><a href="#1-修改" class="headerlink" title="1.修改"></a>1.修改</h3><pre><code class="sql">-- 修改表名    ALTER TABLE 旧表名 RENAME AS 新表名
+ALTER TABLE teacher RENAME AS teacher1
+-- 增加表的字段  ALTER TABLE 表名 ADD 字段名 列属性
+ALTER TABLE teacher1 ADD age INT(11)
+-- 修改表的字段（重命名，修改约束！）
+-- ALTER TABLE 表名 MODIFY 字段名 列属性[]
+ALTER TABLE teacher1 MODIFY age VARCHAR(11)  -- 修改约束
+-- ALTER TABLE 表名 CHANGE 旧名名 新名字 列属性[]
+ALTER TABLE teacher1 CHANGE age age1 INT(1)  -- 字段重命名
 
-
-
-<h2 id="2-6、修改表"><a href="#2-6、修改表" class="headerlink" title="2.6、修改表"></a>2.6、修改表</h2><h3 id="1-修改"><a href="#1-修改" class="headerlink" title="1.修改"></a>1.修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 修改表名    ALTER TABLE 旧表名 RENAME AS 新表名</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> teacher RENAME <span class="keyword">AS</span> teacher1</span><br><span class="line"><span class="comment">-- 增加表的字段  ALTER TABLE 表名 ADD 字段名 列属性</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> teacher1 <span class="keyword">ADD</span> age <span class="type">INT</span>(<span class="number">11</span>)</span><br><span class="line"><span class="comment">-- 修改表的字段（重命名，修改约束！）</span></span><br><span class="line"><span class="comment">-- ALTER TABLE 表名 MODIFY 字段名 列属性[]</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> teacher1 MODIFY age <span class="type">VARCHAR</span>(<span class="number">11</span>)  <span class="comment">-- 修改约束</span></span><br><span class="line"><span class="comment">-- ALTER TABLE 表名 CHANGE 旧名名 新名字 列属性[]</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> teacher1 CHANGE age age1 <span class="type">INT</span>(<span class="number">1</span>)  <span class="comment">-- 字段重命名</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除表的字段   ALTER TABLE 表名 DROP 字段名</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> teacher1 <span class="keyword">DROP</span> age1</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-删除"><a href="#2-删除" class="headerlink" title="2.删除"></a>2.删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 删除表  </span><br><span class="line">DROP TABLE IF EXISTS teacher1</span><br></pre></td></tr></table></figure>
-
+-- 删除表的字段   ALTER TABLE 表名 DROP 字段名
+ALTER TABLE teacher1 DROP age1
+</code></pre>
+<h3 id="2-删除"><a href="#2-删除" class="headerlink" title="2.删除"></a>2.删除</h3><pre><code>-- 删除表  
+DROP TABLE IF EXISTS teacher1
+</code></pre>
 <p>==所以的创建和删除操作尽量加上判断，以免报错~==</p>
 <p>注意点：</p>
 <ul>
@@ -300,16 +350,59 @@
 <li>所有的符号全部用英文！</li>
 </ul>
 <h1 id="3、MySQL数据管理"><a href="#3、MySQL数据管理" class="headerlink" title="3、MySQL数据管理"></a>3、MySQL数据管理</h1><h2 id="3-1、外键（了解即可）"><a href="#3-1、外键（了解即可）" class="headerlink" title="3.1、外键（了解即可）"></a>3.1、外键（了解即可）</h2><p><strong>方式一、在创建表的时候，增加约束（麻烦，比较复杂）</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `grade`(</span><br><span class="line">  `gradeid` <span class="type">INT</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;年级id&#x27;</span>,</span><br><span class="line">  `gradename` <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;年级名称&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY(`gradeid`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学生表的 gradeid 字段要去引用年级表的gradeid</span></span><br><span class="line"><span class="comment">-- 定义外键key</span></span><br><span class="line"><span class="comment">-- 给这个外键添加约束（执行引用）  references 引用</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> `student`(</span><br><span class="line">   `id` <span class="type">INT</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;学号&#x27;</span>,</span><br><span class="line">   `name` <span class="type">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;匿名&#x27;</span> COMMENT <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">   `pwd` <span class="type">VARCHAR</span>(<span class="number">20</span>)<span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;123456&#x27;</span> COMMENT <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">   `sex` <span class="type">VARCHAR</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;女&#x27;</span> COMMENT <span class="string">&#x27;性别&#x27;</span>,</span><br><span class="line">   `birthday` DATETIME <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;出生日期&#x27;</span>,</span><br><span class="line">   `gradeid` <span class="type">INT</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;学生的年级&#x27;</span>,</span><br><span class="line">   `address` <span class="type">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;家庭住址&#x27;</span>,</span><br><span class="line">   `email` <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;邮箱&#x27;</span>,</span><br><span class="line">   <span class="keyword">PRIMARY</span> KEY(`id`),</span><br><span class="line">   KEY `FK_gradeid` (`gradeid`),</span><br><span class="line">   <span class="keyword">CONSTRAINT</span> `FK_gradeid` <span class="keyword">FOREIGN</span> KEY (`gradeid`) <span class="keyword">REFERENCES</span> `grade` (`gradeid`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">CREATE TABLE `grade`(
+  `gradeid` INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年级id&#39;,
+  `gradename` VARCHAR(50) NOT NULL COMMENT &#39;年级名称&#39;,
+  PRIMARY KEY(`gradeid`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8
 
-
-
+-- 学生表的 gradeid 字段要去引用年级表的gradeid
+-- 定义外键key
+-- 给这个外键添加约束（执行引用）  references 引用
+CREATE TABLE IF NOT EXISTS `student`(
+   `id` INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+   `name` VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+   `pwd` VARCHAR(20)NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
+   `sex` VARCHAR(2) NOT NULL DEFAULT &#39;女&#39; COMMENT &#39;性别&#39;,
+   `birthday` DATETIME DEFAULT NULL COMMENT &#39;出生日期&#39;,
+   `gradeid` INT(10) NOT NULL COMMENT &#39;学生的年级&#39;,
+   `address` VARCHAR(100) DEFAULT NULL COMMENT &#39;家庭住址&#39;,
+   `email` VARCHAR(50) DEFAULT NULL COMMENT &#39;邮箱&#39;,
+   PRIMARY KEY(`id`),
+   KEY `FK_gradeid` (`gradeid`),
+   CONSTRAINT `FK_gradeid` FOREIGN KEY (`gradeid`) REFERENCES `grade` (`gradeid`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8
+</code></pre>
 <p>删除有外键关系表的时候，必须要先删除引用别人的表（从表），再删除被引用的表（主表）</p>
 <p>方式二：创建表成功后，添加外键约束</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `grade`(</span><br><span class="line">  `gradeid` <span class="type">INT</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;年级id&#x27;</span>,</span><br><span class="line">  `gradename` <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> COMMENT <span class="string">&#x27;年级名称&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY(`gradeid`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 学生表的 gradeid 字段要去引用年级表的gradeid</span></span><br><span class="line"><span class="comment">-- 定义外键key</span></span><br><span class="line"><span class="comment">-- 给这个外键添加约束（执行引用）  references 引用</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> `student`(</span><br><span class="line">   `id` <span class="type">INT</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT COMMENT <span class="string">&#x27;学号&#x27;</span>,</span><br><span class="line">   `name` <span class="type">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;匿名&#x27;</span> COMMENT <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">   `pwd` <span class="type">VARCHAR</span>(<span class="number">20</span>)<span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;123456&#x27;</span> COMMENT <span class="string">&#x27;密码&#x27;</span>,</span><br><span class="line">   `sex` <span class="type">VARCHAR</span>(<span class="number">2</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;女&#x27;</span> COMMENT <span class="string">&#x27;性别&#x27;</span>,</span><br><span class="line">   `birthday` DATETIME <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">&#x27;出生日期&#x27;</span>,</span><br><span class="line">   `gradeid` <span class="type">int</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;学生的年级&#x27;</span>,</span><br><span class="line">   `address` <span class="type">varchar</span>(<span class="number">100</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">&#x27;家庭住址&#x27;</span>,</span><br><span class="line">   `email` <span class="type">varchar</span>(<span class="number">50</span>) <span class="keyword">default</span> <span class="keyword">null</span> comment <span class="string">&#x27;邮箱&#x27;</span>,</span><br><span class="line">   <span class="keyword">primary</span> key(`id`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">default</span> charset<span class="operator">=</span>utf8</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表的时候没有外键关系</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `student`</span><br><span class="line"><span class="keyword">add</span> <span class="keyword">constraint</span> `FK_gradeid` <span class="keyword">foreign</span> key(`gradeid`) <span class="keyword">references</span> `grade` (`gradeid`);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- ALTER TABLE 表 add constraint `FK_gradeid` foreign key(`gradeid`) references `grade` (`gradeid`);</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">CREATE TABLE `grade`(
+  `gradeid` INT(10) NOT NULL AUTO_INCREMENT COMMENT &#39;年级id&#39;,
+  `gradename` VARCHAR(50) NOT NULL COMMENT &#39;年级名称&#39;,
+  PRIMARY KEY(`gradeid`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8
 
 
+-- 学生表的 gradeid 字段要去引用年级表的gradeid
+-- 定义外键key
+-- 给这个外键添加约束（执行引用）  references 引用
+CREATE TABLE IF NOT EXISTS `student`(
+   `id` INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+   `name` VARCHAR(30) NOT NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+   `pwd` VARCHAR(20)NOT NULL DEFAULT &#39;123456&#39; COMMENT &#39;密码&#39;,
+   `sex` VARCHAR(2) NOT NULL DEFAULT &#39;女&#39; COMMENT &#39;性别&#39;,
+   `birthday` DATETIME default null comment &#39;出生日期&#39;,
+   `gradeid` int(10) not null comment &#39;学生的年级&#39;,
+   `address` varchar(100) default null comment &#39;家庭住址&#39;,
+   `email` varchar(50) default null comment &#39;邮箱&#39;,
+   primary key(`id`)
+)ENGINE=INNODB default charset=utf8
 
+-- 创建表的时候没有外键关系
+alter table `student`
+add constraint `FK_gradeid` foreign key(`gradeid`) references `grade` (`gradeid`);
+
+-- ALTER TABLE 表 add constraint `FK_gradeid` foreign key(`gradeid`) references `grade` (`gradeid`);
+</code></pre>
 <p>以上的操作都是物理外键，数据库级别的外键，不建议使用（避免数据库过多造成困扰，这里了解即可）</p>
 <p>==最佳实践==</p>
 <ul>
@@ -326,8 +419,27 @@
 <h2 id="3-3、添加"><a href="#3-3、添加" class="headerlink" title="3.3、添加"></a>3.3、添加</h2><blockquote>
 <p>​    insert</p>
 </blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 插入语句（添加）</span></span><br><span class="line"><span class="comment">-- insert into 表名 ([字段1,字段2,字段3]) values(&#x27;值1&#x27;),(&#x27;值2&#x27;),(&#x27;值3&#x27;),....</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `grade`(`gradename`) <span class="keyword">VALUES</span>(<span class="string">&#x27;大四&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 由于主键自增我们可以省略（如果不写表的字段，他就会一一匹配）</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `grade` <span class="keyword">VALUES</span>(<span class="string">&#x27;大三&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 一般写插入语句，我们一定要数据和字段一一对应！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入多个字段</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `grade`(`gradename`) </span><br><span class="line"><span class="keyword">VALUES</span>(<span class="string">&#x27;大二&#x27;</span>),(<span class="string">&#x27;大一&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `student`(`name`) <span class="keyword">VALUES</span> (<span class="string">&#x27;张三&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `student`(`name`,`pwd`,`sex`) <span class="keyword">VALUES</span> (<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;aaaaa&#x27;</span>,<span class="string">&#x27;男&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `student`(`name`,`pwd`,`sex`) </span><br><span class="line"><span class="keyword">VALUES</span> (<span class="string">&#x27;李四&#x27;</span>,<span class="string">&#x27;aaaaa&#x27;</span>,<span class="string">&#x27;男&#x27;</span>),(<span class="string">&#x27;王五&#x27;</span>,<span class="string">&#x27;aaaaa&#x27;</span>,<span class="string">&#x27;男&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="sql">-- 插入语句（添加）
+-- insert into 表名 ([字段1,字段2,字段3]) values(&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;),....
+INSERT INTO `grade`(`gradename`) VALUES(&#39;大四&#39;)
 
+-- 由于主键自增我们可以省略（如果不写表的字段，他就会一一匹配）
+INSERT INTO `grade` VALUES(&#39;大三&#39;)
+
+-- 一般写插入语句，我们一定要数据和字段一一对应！
+
+-- 插入多个字段
+INSERT INTO `grade`(`gradename`) 
+VALUES(&#39;大二&#39;),(&#39;大一&#39;)
+
+
+INSERT INTO `student`(`name`) VALUES (&#39;张三&#39;)
+
+INSERT INTO `student`(`name`,`pwd`,`sex`) VALUES (&#39;张三&#39;,&#39;aaaaa&#39;,&#39;男&#39;)
+
+INSERT INTO `student`(`name`,`pwd`,`sex`) 
+VALUES (&#39;李四&#39;,&#39;aaaaa&#39;,&#39;男&#39;),(&#39;王五&#39;,&#39;aaaaa&#39;,&#39;男&#39;)
+</code></pre>
 <p>语法：<strong>insert into 表名 ([字段1,字段2,字段3]) values(‘值1’),(‘值2’),(‘值3’),….</strong></p>
 <p>注意事项：</p>
 <ol>
@@ -338,8 +450,19 @@
 <h2 id="3-4、修改"><a href="#3-4、修改" class="headerlink" title="3.4、修改"></a>3.4、修改</h2><blockquote>
 <p>​    update   修改谁 （条件）  set原来的值=新值</p>
 </blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 修改学员名字,带了条件</span></span><br><span class="line">UPDATE `student` <span class="keyword">SET</span> `name` <span class="operator">=</span> <span class="string">&#x27;狂神&#x27;</span> <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 不指定条件的情况下，会改动所有表！</span></span><br><span class="line">UPDATE `student` <span class="keyword">SET</span> `name` <span class="operator">=</span> <span class="string">&#x27;长江七号&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 修改多个属性，逗号隔开</span></span><br><span class="line">UPDATE `student` <span class="keyword">SET</span> `name` <span class="operator">=</span> <span class="string">&#x27;狂神&#x27;</span>,`email` <span class="operator">=</span> <span class="string">&#x27;254173039@qq.com&#x27;</span> <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 语法</span></span><br><span class="line"><span class="comment">-- UPDATE 表名 set colnum_name = value,[colnum = value,...] where [条件]</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">-- 修改学员名字,带了条件
+UPDATE `student` SET `name` = &#39;狂神&#39; WHERE id=1;
 
+-- 不指定条件的情况下，会改动所有表！
+UPDATE `student` SET `name` = &#39;长江七号&#39;
+
+
+-- 修改多个属性，逗号隔开
+UPDATE `student` SET `name` = &#39;狂神&#39;,`email` = &#39;254173039@qq.com&#39; WHERE id=1;
+
+-- 语法
+-- UPDATE 表名 set colnum_name = value,[colnum = value,...] where [条件]
+</code></pre>
 <p>条件：where 子句 运算符 id 等于某个值，大于某个值，在某个区间内修改…</p>
 <p>操作符会返回布尔值</p>
 <table>
@@ -406,8 +529,9 @@
 <td>true</td>
 </tr>
 </tbody></table>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 通过多个条件定位数据</span></span><br><span class="line">UPDATE `student` <span class="keyword">SET</span> `name`<span class="operator">=</span><span class="string">&#x27;长江七号&#x27;</span> <span class="keyword">WHERE</span> `name`<span class="operator">=</span><span class="string">&#x27;狂神&#x27;</span> <span class="keyword">AND</span> `sex`<span class="operator">=</span><span class="string">&#x27;男&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">-- 通过多个条件定位数据
+UPDATE `student` SET `name`=&#39;长江七号&#39; WHERE `name`=&#39;狂神&#39; AND `sex`=&#39;男&#39;
+</code></pre>
 <p>语法：<code> UPDATE 表名 set colnum_name = value,[colnum = value,...] where [条件]</code></p>
 <p>注意：</p>
 <ul>
@@ -417,26 +541,25 @@
 <li>多个设置的属性之间，使用英文逗号隔开</li>
 </ul>
 <p>如：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE `student` <span class="keyword">SET</span> `birthday`<span class="operator">=</span><span class="built_in">CURRENT_TIME</span> <span class="keyword">WHERE</span> `name` <span class="operator">=</span> <span class="string">&#x27;长江七号&#x27;</span> </span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="sql">UPDATE `student` SET `birthday`=CURRENT_TIME WHERE `name` = &#39;长江七号&#39; 
+</code></pre>
 <h2 id="3-5、删除"><a href="#3-5、删除" class="headerlink" title="3.5、删除"></a>3.5、删除</h2><blockquote>
 <p>​    delete 命令</p>
 </blockquote>
 <p>语法：<code>delete from 表名 where[条件]</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 删除数据（避免这样写,会全部删除）</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> `student` </span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除指定数据</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> `student` <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">-- 删除数据（避免这样写,会全部删除）
+DELETE FROM `student` 
 
-
-
+-- 删除指定数据
+DELETE FROM `student` WHERE id=1
+</code></pre>
 <blockquote>
 <p>​    TRUNCATE 命令</p>
 </blockquote>
 <p>作用：完全清空一个数据库表，表的结构和索引约束不会变！</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 清空student 表</span></span><br><span class="line"><span class="keyword">TRUNCATE</span> `student`</span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="sql">-- 清空student 表
+TRUNCATE `student`
+</code></pre>
 <blockquote>
 <p>​    delete和TRUNCATE区别</p>
 </blockquote>
@@ -448,8 +571,20 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 测试delete和TRUNCATE 区别</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `test`(</span><br><span class="line">  `id` <span class="type">INT</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  `coll` <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY(`id`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `test`(`coll`) <span class="keyword">VALUES</span>(<span class="string">&#x27;1&#x27;</span>),(<span class="string">&#x27;2&#x27;</span>),(<span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> `test`  <span class="comment">-- 不会影响自增</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> `test`  <span class="comment">-- 自增会归零</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">-- 测试delete和TRUNCATE 区别
+CREATE TABLE `test`(
+  `id` INT(4) NOT NULL AUTO_INCREMENT,
+  `coll` VARCHAR(20) NOT NULL,
+  PRIMARY KEY(`id`)
+)ENGINE=INNODB DEFAULT CHARSET=utf8
 
+
+INSERT INTO `test`(`coll`) VALUES(&#39;1&#39;),(&#39;2&#39;),(&#39;3&#39;)
+
+DELETE FROM `test`  -- 不会影响自增
+
+TRUNCATE TABLE `test`  -- 自增会归零
+</code></pre>
 <p>了解即可：<code>delete删除的问题</code>，重启数据库，现象</p>
 <ul>
 <li>InnoDB 自增列会从1开始（存在内存当中的，断电即失）</li>
@@ -534,7 +669,7 @@ gitment.render('gitment')
 <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
  
 
-<script src="/js/app.js?v=1620137714053"></script>
+<script src="/js/app.js?v=1620139313508"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
